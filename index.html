@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="load_on_scroll.js"></script>
+    <style>
+        body {
+            height: 150vh;
+            background-color: tomato;
+        }
+
+        div {
+            height: 300px;
+            width: 300px;
+            background-color: #222;
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+            overflow: scroll;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="load()">click</button>
+    <div id="div">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque dolorem accusantium perspiciatis obcaecati
+        aliquid natus sunt? Ratione officia animi, voluptas quam possimus eius modi facilis quos repellendus fugit ad,
+        mollitia quod qui omnis exercitationem molestiae! Veritatis aut unde ex maiores ad porro impedit soluta tempore
+        officiis mollitia velit, dolore quo quos architecto quasi numquam reprehenderit vel accusantium perspiciatis
+        expedita voluptatem. Veritatis, voluptatem deserunt. Perferendis ipsum fuga voluptatum optio aut, quia amet sed
+        saepe possimus enim totam, quasi quis nihil dolorem autem doloremque alias! Facilis at similique quos impedit,
+        architecto quis dolorum dignissimos sapiente repellat, harum eius enim eaque sunt nisi.
+    </div>
+
+    <script>
+
+
+
+
+
+        function load() {
+            load_on_scroll({
+                // target:"#div",
+                url: "api.php",
+                data:{extra:"extra"},
+                success: function (response) {
+                    console.log(response);
+                },
+               
+            });
+        }
+        load();
+    </script>
+
+
+
+
+</body>
+
+</html>
